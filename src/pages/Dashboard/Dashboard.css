@@ -1,0 +1,19 @@
+.containerPai{
+    text-align: center;
+    color: rgb(196, 115, 182);;
+
+}
+
+.container{
+    display: flex;
+    padding: 2%;
+    gap: 1%;
+    
+}
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    gap: 2px;
+}
