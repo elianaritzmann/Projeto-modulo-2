@@ -1,0 +1,17 @@
+.footer{
+    background-color: rgb(223, 156, 212);
+     color: aliceblue;
+     padding: 5px;
+     padding-left: 25px;
+     padding-right: 25px;
+     display: flex;
+     justify-content: space-around;
+    
+    
+}
+.redes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
