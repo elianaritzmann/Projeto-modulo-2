@@ -1,0 +1,113 @@
+.coleta{
+    margin: 0 auto;
+    width: 50%;
+    height: 70%;
+    background-color: rgb(242, 238, 241) ;
+    border-radius: 10px;
+    border: ridge rgb(239, 212, 234);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    gap: 2%;
+    color: rgb(196, 115, 182);
+    
+}
+.coleta span{
+    text-align: center;
+}
+.coleta h2{
+    text-align: center;
+}
+
+.nomeDescricao{
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    padding: 2%;
+     height: 40%;
+}
+.nomeDescricao input{
+
+    width: 50%;
+    height: 20%;
+    align-self: flex-start;
+}
+.nomeDescricao textarea{
+    height: 30%;
+    width: 50%;
+}
+.checkboxform{
+    align-items: center;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+
+
+}.checkboxform input{
+    
+    justify-content: space-around;
+    width: 15px;
+    height: 15px;
+    gap: 10px;
+    
+}
+.endereco{
+    height: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.formColeta button{
+    height: 10%;
+    width: 10%;
+}
+.cep{
+    height: 40%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} .cep input{
+    width: 100%;
+    height: 100%;
+}
+.estado{
+    height: 40%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} .estado input{
+    width: 100%;
+    height: 100%;
+}.logradouro{
+    height: 40%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} .logradouro input{
+    width: 100%;
+    height: 100%;
+}.cidade{
+    height: 40%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} .cidade input{
+    width: 100%;
+    height: 100%;
+}.numero{
+    height: 40%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} .numero input{
+    width: 100%;
+    height: 100%;
+}
