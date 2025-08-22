@@ -15,7 +15,7 @@ function CardPontoColeta(props){
                   <p>{props.materiais}</p></div>
               </div> 
                 <div className='botaoExcluir'>
-                   <DeleteIcon></DeleteIcon>
+                   <DeleteIcon onClick = {props.deleteRota}></DeleteIcon>
               </div>
                 
             </div>
