@@ -3,9 +3,9 @@ import CardPontoColeta from '../../components/CardPontoColeta';
 import RegisterPlace from '../RegisterPlace/RegisterPlace';
 import './Places.css'
 import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import axios from 'axios';
-import { toast, ToastContainer } from "react-toastify";
+import { toast} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function Places() {
@@ -24,6 +24,26 @@ function Places() {
       console.log(response.data)
   })
   }, []);         
+
+    const deleteRota =(id)=>{
+        const usuario = (JSON.parse(localStorage.getItem('usuario'))) || []
+        axios.delete(`http://localhost:3000/coletas/${id}`,{ 
+    headers: {
+        usuarioid: usuario.usuario.id,
+        "Content-Type": "application/json"
+      }}
+        )
+        .then(()=>{
+          toast.success("Rota excluída com sucesso!")
+        }).catch(()=>{
+          toast.error("Houve um erro ao cadastrar. Tente novamente mais tarde")
+        }
+        )
+        const novaLista = locais.filter((l) => l.id !== id); 
+        setLocais(novaLista)
+       }  
+
+       
   return (
     <div className='containerPlaces'>
       <h1 className='seusPontos'>Seus pontos de Coleta</h1>
@@ -39,10 +59,11 @@ function Places() {
     locais.map((local) => {
       return (
         <CardPontoColeta
-          key={local.id} // melhor que usar o índice
+          key={local.id}
           nome={local.nome}
           endereco={local.endereco}
           materiais={local.residuos}
+          deleteRota={() => deleteRota(local.id)}
         />
       )
     })
