@@ -1,0 +1,45 @@
+
+.navbar{
+    background-color: rgb(223, 156, 212);;
+    color: aliceblue;
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    padding: 5px;
+}
+nav{
+    height: 50%;
+    display: flex;
+}
+.links{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    
+}
+.links a{
+    color: aliceblue;
+    font-weight: bold;
+    text-decoration: none;
+}
+.sair{
+    display: flex;
+    align-items: center;
+    width: 10%;
+    height: 60%;
+    gap: 5px;
+}
+.sair :hover{
+    cursor: pointer;
+}
+.locaisdecoleta :hover{
+    cursor:pointer;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
