@@ -1,13 +1,12 @@
 import { Route, Routes } from "react-router";
-import "react-toastify/dist/ReactToastify.css";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Places from "./pages/Places/Places";
 import RegisterPlace from "./pages/RegisterPlace/RegisterPlace";
 import './App.css'
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import Navbar from "./components/navbar/Navbar";
+import Footer from "./components/footer/Footer";
 
 function App() {
 
