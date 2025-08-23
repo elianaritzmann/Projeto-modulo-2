@@ -1,9 +1,5 @@
 import { useEffect, useState } from 'react';
-<<<<<<< Updated upstream
-import CardPontoColeta from '../../components/CardPontoColeta';
-=======
 import CardPontoColeta from '../../components/cardPontoColeta/CardPontoColeta';
->>>>>>> Stashed changes
 import RegisterPlace from '../RegisterPlace/RegisterPlace';
 import './Places.css'
 import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
@@ -25,11 +21,7 @@ function Places() {
       }}
   ).then((response)=>{
       setLocais(response.data)
-<<<<<<< Updated upstream
-      console.log(response.data)
-=======
       
->>>>>>> Stashed changes
   })
   }, []);         
 
@@ -65,6 +57,7 @@ function Places() {
   {locais.length > 0 ? (
     locais.map((local) => {
       return (
+        
         <CardPontoColeta
           key={local.id}
           nome={local.nome}
