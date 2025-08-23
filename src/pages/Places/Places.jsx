@@ -57,6 +57,7 @@ function Places() {
   {locais.length > 0 ? (
     locais.map((local) => {
       return (
+        
         <CardPontoColeta
           key={local.id}
           nome={local.nome}
