@@ -4,7 +4,7 @@ function CardEstado(props){
     return(
         <div className='card'>
         <h3>{props.estado}</h3>
-        <span>{props.quantidade}</span>
+        <span>Pontos de coleta: {props.quantidade}</span>
         </div>
     )
     

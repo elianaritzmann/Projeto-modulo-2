@@ -1,10 +1,10 @@
-import CardEstado from '../../components/CardEstado';
-import Mapa from '../../components/mapa';
+import CardEstado from '../../components/cardEstado/CardEstado';
 import './Dashboard.css'
-import { use, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from 'axios';
+import Mapa from '../../components/mapa/Mapa.jsx'
 
 function Dashboard() {
   const [coletas, setColetas]=useState([])
@@ -19,6 +19,7 @@ function Dashboard() {
 
   return (
         <div className='containerPai'>
+          <ToastContainer></ToastContainer>
           <h1>Distribuição de pontos de coleta por estado</h1>
           <div className='container'>
 
