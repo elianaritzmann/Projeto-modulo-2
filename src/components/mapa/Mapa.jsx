@@ -3,7 +3,7 @@ import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import './Mapa.css'
 import Marcador from './Marcador';
-import {  useState } from 'react'
+import { useEffect, useState } from 'react'
 import "react-toastify/dist/ReactToastify.css";
 import axios from 'axios';
 
@@ -11,10 +11,15 @@ function Mapa() {
   const position = [-7.945236115447601, -55.318090142922316];
   const [pontos, setPontos]= useState([])
 
-   axios.get('http://localhost:3000/dashboard')
-   .then((response)=>{
-    setPontos(response.data.locais)
-   })
+  useEffect(() => {
+    axios.get('http://localhost:3000/dashboard')
+      .then((response) => {
+        setPontos(response.data.locais);
+      })
+      .catch(() => {
+        console.error("Erro ao carregar pontos do mapa");
+      });
+  }, []);
 
   return (
     <MapContainer
