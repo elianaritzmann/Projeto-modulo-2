@@ -5,6 +5,7 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from 'axios';
 function RegisterPlace() {
+
 const [nomedoPonto, setNomedoPonto]= useState('')
 const [descricao, setDescricao] = useState('')
 const [cep, setCep]=useState('')
@@ -45,6 +46,7 @@ function save(event){
   const residuos = []
   
   if(vidro === true){
+
     residuos.push("vidro")
   }
    if(papel === true){
@@ -58,6 +60,21 @@ function save(event){
   }
   if(organico === true){
     residuos.push("orgânico")
+
+    residuos.push(" -Vidro ")
+  }
+   if(papel === true){
+    residuos.push(" -Papel ")
+  }
+   if(plastico === true){
+    residuos.push(" -Plástico ")
+  }
+  if(metal === true){
+    residuos.push(" -Metal ")
+  }
+  if(organico === true){
+    residuos.push(" -Orgânico ")
+
   }
     const novaRota = {
   nome: nomedoPonto,
@@ -94,7 +111,7 @@ function save(event){
   return(
     <div className='coleta'>
       <h2>Cadastro de Pontos de Coleta</h2>
-     
+     <ToastContainer></ToastContainer>
       <form action="" className='formColeta' onSubmit={save}>
 
         <div className='nomeDescricao'>
