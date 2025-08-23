@@ -1,10 +1,10 @@
 import './CardEstado.css'
 
-function CardEstado(){
+function CardEstado(props){
     return(
         <div className='card'>
-        <h3>SC</h3>
-        <span>15</span>
+        <h3>{props.estado}</h3>
+        <span>{props.quantidade}</span>
         </div>
     )
     
