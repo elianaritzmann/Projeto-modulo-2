@@ -4,6 +4,8 @@ import './Login.css'
 import { Link, useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 
+import "react-toastify/dist/ReactToastify.css";
+
 function Login() {
   const [email, setEmail] = useState('')
   const [senha, setSenha] = useState('')
@@ -37,7 +39,7 @@ function Login() {
   return (
     
       <div className='login'>
-        <ToastContainer></ToastContainer>
+         <ToastContainer></ToastContainer>
         <h1>Login</h1>
         <form action="" onSubmit={save}>
            <input type="email" name = 'email' value= {email} onChange={(event)=>{ setEmail(event.target.value)} } placeholder="Digite seu email" />
