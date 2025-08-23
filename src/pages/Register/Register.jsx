@@ -1,9 +1,9 @@
+
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import * as Yup from 'yup';
 import './Register.css'
-import { use, useEffect, useState } from 'react'
- import { Link, useNavigate } from 'react-router-dom';
+import {  useState } from 'react'
+ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 function Register() {
   const [nome, setNome] = useState('')
@@ -47,12 +47,12 @@ function Register() {
       toast.success("Cadastro feito com sucesso!");
       setTimeout(() => navigate('/'), 2000)
     })
-    .catch(() => {
-      toast.error("Houve um erro ao cadastrar. Tente novamente mais tarde");
+    .catch((error) => {
+      if (error.response) {
+        toast.error(error.response.data.erro || "Erro inesperado ao excluir rota.");
+      }
     });
       }
-    
-     //TODO validar se cpf existe na api
   } 
    
   return <>
@@ -84,6 +84,7 @@ function Register() {
         </div>
         
         </>;
+
 }
 
 export default Register;
